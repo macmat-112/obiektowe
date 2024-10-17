@@ -1,0 +1,43 @@
+1.
+float
+float
+int
+int
+int
+int
+int
+int
+2.
+System.out.println(((Math.sqrt(7) - 1) / 2) + (Math.pow(3, 3) % 2));
+System.out.println((3 + Math.sqrt(3) / (Math.sqrt(5) / 6)) + 1);
+System.out.println(13 % 5 % 2);
+System.out.println((9 % 6 + 1) / Math.pow(2, 0.25));
+3.
+Scanner scan = new Scanner(System.in);
+System.out.println("Podaj dwa slowa:");
+String first = scan.nextLine();
+String second = scan.nextLine();
+System.out.println("First: " + first + ", second: " + second + ".");
+4.
+Scanner scan = new Scanner(System.in);
+System.out.println("Podaj dwie liczby:");
+int first = scan.nextInt();
+int second = scan.nextInt();
+System.out.println("Suma: " + (first + second) + "\nRoznica: " + (first - second) 
++ "\nIloczyn: " + (first * second) + "\nIloraz: " + (first / second));
+5.
+Scanner scan = new Scanner(System.in);
+System.out.println("Podaj liczbe:");
+int a = scan.nextInt();
+System.out.println(a + 140);
+System.out.println(a - 31);
+System.out.println(a * 7);
+System.out.println((float)a / 13);
+System.out.println(a % 7);
+System.out.println(a / 4);
+System.out.println((double)Math.pow(a, 45));
+System.out.println(a & 67);
+System.out.println(a | 59);
+System.out.println(a ^ 23);
+System.out.println(a << 5);
+System.out.println(a >> 6);

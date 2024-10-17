@@ -1,0 +1,171 @@
+main:
+	public static void main(String[] args) 
+	{
+	    Scanner scan = new Scanner(System.in);
+	    System.out.println("Podaj liczbe:");
+	    int n = scan.nextInt();
+	    funKwaRozwiazania(n);
+	}
+1.
+    public static void trojkiPitagorejskie(int n)
+    {
+    	for(int a = 1; a <= n; a++)
+    	{
+        	for(int b = 1; b <= n; b++)
+        	{
+            	for(int c = 1; c <= n; c++)
+            	{
+            		if((a * a) + (b * b) == c * c)
+            		{
+            			System.out.println(a);
+            			System.out.println(b);
+            			System.out.println(c + "\n");
+            		}
+            	}
+        	}
+    	}
+    }
+2.
+    public static void funKwaRozwiazania(int n)
+    {
+    	for(int a = n * (-1); a <= n; a++)
+    	{
+        	for(int b = n * (-1); b <= n; b++)
+        	{
+            		for(int c = n * (-1); c <= n; c++)
+            		{
+            			int d = (b * b) - (4 * a * c);
+            			if(!(d < 0))
+            			{
+            				System.out.println(a);
+            				System.out.println(b);
+            				System.out.println(c + "\n");
+            			}
+            		}
+        	}
+    	}
+    }
+3.
+    public static void funKwaDelta(int n)
+    {
+    	for(int a = n * (-1); a <= n; a++)
+    	{
+        	for(int b = n * (-1); b <= n; b++)
+        	{
+            		for(int c = n * (-1); c <= n; c++)
+            		{
+            			int d = (b * b) - (4 * a * c);
+            			double droot = Math.sqrt(d);
+            			for(int e = 1; e * e <= droot; e++)
+            			{
+                			if((e * e) == droot)
+                			{
+                				System.out.println(a);
+                				System.out.println(b);
+                				System.out.println(c + "\n");
+                			}
+            			}
+            		}
+        	}
+    	}
+    }
+4.
+    public static void liczbyPierwsze(int n)
+    {
+    	for(int a = 2; a <= n; a++)
+    	{
+    		int check = 1;
+        	for(int b = 2; b * b <= a; b++)
+        	{
+        		if(a % b == 0)
+        		{
+        			check = 0;
+        			break;
+        		}
+        	}
+        	if(check == 1) System.out.println(a);
+    	}
+    }
+5.
+    public static void liczbyPodzielne(int m, int n)
+    {
+    	int t = (int)Math.pow(10, m - 1);
+    	for(int a = 1 * t; a < t * 10; a++)
+    	{
+        	if(a % n == 0) System.out.println(a);
+    	}
+    }
+6.
+
+7.
+    public static void silnia(int n)
+    {
+    	int s = 1;
+    	for(int a = 2; a <= n; a++) s *= a;
+    	System.out.println(s);
+    }
+8.
+    public static void silniaPodwojna(int n)
+    {
+    	int s;
+    	if(n % 2 == 0)
+    	{
+    		s = 2;
+    		for(int a = 4; a <= n; a += m) s *= a;
+    	}
+    	else
+    	{
+    		s = 1;
+    		for(int a = 3; a <= n; a += m) s *= a;
+    	}
+    	System.out.println(s);
+    }
+9.
+    public static void silnia(int m, int n)
+    {
+    	int mod = n % m;
+    	int s;
+    	if(mod == 0)
+    	{
+    		s = m;
+    		for(int a = s + m; a <= n; a += m) s *= a;
+    	}
+    	else
+    	{
+    		s = mod;
+    		for(int a = s + m; a <= n; a += m) s *= a;
+    	}
+    	System.out.println(s);
+    }
+10.
+    public static double silnia(int n)
+    {
+    	int s = 1;
+    	for(int a = 2; a <= n; a++) s *= a;
+    	return s;
+    }
+	
+    public static void dwumianNewtona(int n, int k)
+    {
+    	double d = silnia(n) / (silnia(k) * silnia(n - k));
+    	System.out.println(d);
+    }
+11.
+    public static void fibonacci(int n)
+    {
+    	if(n == 1) System.out.println("0");
+    	else if(n == 2) System.out.println("1");
+    	else
+    	{
+    		int f1 = 2;
+    		int f2 = 1;
+    		int b;
+    		for(int a = 3; a < n; a++)
+    		{
+    			b = f1;
+    			f1 += f2;
+    			f2 = b;
+    		}
+    		System.out.println(f1);
+    	}
+    }
